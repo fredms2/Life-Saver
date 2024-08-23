@@ -1,0 +1,24 @@
+If you lost 2-FA and cannot find recovery code, here are troubles you might face:
+1. Unlink email address(es) associated to the (old) account.
+2. Use the email address to create a new account
+3. Optional: follow old account for tracking.
+
+With new account, I endounted the following errors when performing git operations as normal:
+1.
+remote: You must verify your email address.
+remote: See https://github.com/settings/emails.
+fatal: unable to access 'https://github.com/Azure/azureml-examples.git/': The requested URL returned error: 403
+
+2. 
+run: git push https://fredms2:<password>@github.com/Azure/azureml-examples
+got:
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/Azure/azureml-examples/'
+
+3. Follow stack overflow answers:
+run: git config --global user.email <email_address>
+run: git config --global user.name fredms2
+run: git config --list
+
+4. Get permissions
